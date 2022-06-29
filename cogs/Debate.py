@@ -24,7 +24,8 @@ class Debate(commands.Cog):
     @commands.command(name="fight")
     async def fight(self, ctx: commands.Context, arg):
         options = options_list(arg)
-        situation = options_list('situation')
+        situations = options_list('situation')
+        situation = random.choice(situations)
         option_a = "d"
         option_b = "d"
         while option_a == option_b:

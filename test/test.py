@@ -15,19 +15,7 @@ def options_list(list_name):
     return list_name
 
 
-#cur.execute('''CREATE TABLE debate (topic, name)''')
-topic_add = 'stuation'
-name_add = 'at dancing'
 
-options = options_list(topic_add)
-
-if options.count(name_add) > 0:
-    print('already in list')
-    pass
-else:
-    cur.execute(f"INSERT INTO debate VALUES ('{topic_add}','{name_add}')")
-    print(f"{name_add} added")
-    con.commit()
 
 '''
 try:
