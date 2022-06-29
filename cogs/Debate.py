@@ -32,7 +32,7 @@ class Debate(commands.Cog):
             option_a = random.choice(options)
             option_b = random.choice(options)
 
-        await ctx.send(f"Debate whether {option_a} or {option_b} is better {situation}")
+        await ctx.send(f"Debate whether {option_a} or {option_b} are better {situation}")
 
 
 def setup(bot):

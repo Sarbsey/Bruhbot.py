@@ -15,8 +15,8 @@ def options_list(list_name):
 # cur.execute('''CREATE TABLE debate (topic, name)''')
 
 
-topic_add = 'animals'
-name_add = 'chinchillas'
+topic_add = 'situation'
+name_add = 'at making you cringe'
 
 options = options_list(topic_add)
 

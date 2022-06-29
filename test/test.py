@@ -1,5 +1,5 @@
 import sqlite3
-#import random
+# import random
 
 # TODO: Make function for collection of options from one topic
 # TODO: Make addition of option for some topic
