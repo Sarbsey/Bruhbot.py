@@ -1,9 +1,38 @@
 import sqlite3
 # import random
+import discord
+import requests
+from bs4 import BeautifulSoup
+
+
+
+def getdata(url):
+    r = requests.get(url)
+    return r.text
 
 # TODO: Make function for collection of options from one topic
 # TODO: Make addition of option for some topic
 
+
+htmldata = getdata("https://a-z-animals.com/animals/")
+soup = BeautifulSoup(htmldata, 'html.parser')
+link_dict = []
+for link in soup.find_all('a'):
+    image_link = link.get('href')
+    image_link = str(image_link)
+    if image_link.startswith('https://a-z-animals.com/animals/'):
+        #link_dict.append(image_link)
+        image_link = image_link.split('/')[-2]
+        if image_link.find('-') == -1:
+            print(image_link)
+    else:
+        pass
+
+
+
+
+
+'''
 con = sqlite3.connect('../cogs/fight.db')
 cur = con.cursor()
 
@@ -17,7 +46,7 @@ def options_list(list_name):
 
 
 
-'''
+
 try:
     cur.execute('''#CREATE TABLE debate (topic, name)''')
 '''add = 'chicken'

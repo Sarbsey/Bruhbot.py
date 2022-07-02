@@ -8,7 +8,7 @@ token = os.environ['DISCORD_TOKEN']
 
 bot = commands.Bot(
     command_prefix=commands.when_mentioned_or("b!"),
-    description="sucks duck"
+    description="sucks dick"
 )
 
 

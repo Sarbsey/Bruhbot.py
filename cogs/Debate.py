@@ -22,17 +22,16 @@ class Debate(commands.Cog):
         self.bot: commands.Bot = bot
 
     @commands.command(name="fight")
-    async def fight(self, ctx: commands.Context, arg):
+    async def fight(self, ctx: commands.Context, arg, situation="in general"):
         options = options_list(arg)
-        situations = options_list('situation')
-        situation = random.choice(situations)
+        # situations = options_list('situation')
         option_a = "d"
         option_b = "d"
         while option_a == option_b:
             option_a = random.choice(options)
             option_b = random.choice(options)
 
-        await ctx.send(f"Debate whether {option_a} or {option_b} are better {situation}")
+        await ctx.send(f"Debate whether {option_a} or {option_b} is better {situation}")
 
 
 def setup(bot):
